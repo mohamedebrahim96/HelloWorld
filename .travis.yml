@@ -11,5 +11,5 @@ android:
 before_script:
  - chmod +x gradlew
 script:
-- ./gradlew build --stacktrace
+#- ./gradlew build --stacktrace
 - chmod +x ./gradlew
