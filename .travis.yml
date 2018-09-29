@@ -1,15 +1,15 @@
+sudo: required
 language: android
+jdk: oraclejdk8
 android:
-  components:
-    - android-28
-    - build-tools-27.0.3
-
-env:
-  global:
-   # install timeout in minutes (2 minutes by default)
-    - ADB_INSTALL_TIMEOUT=8
-
-# Run assemble and unit tests
+ components:
+    - platform-tools
+    - tools
+    - build-tools-26.0.2
+    - android-26
+    - extra-android-m2repository
+before_script:
+ - chmod +x gradlew
 script:
-  #- chmod +x ./gradlew
-  - ./gradlew clean assembleDebug assembleRelease testDebug
+- ./gradlew build --stacktrace
+- chmod +x ./gradlew
