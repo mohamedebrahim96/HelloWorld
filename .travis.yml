@@ -20,12 +20,14 @@ env:
 
 android:
   components:
-  - tools
-  - tools # Running this twice get's the latest build tools (https://github.com/codepath/android_guides/wiki/Setting-up-Travis-CI)
-  - platform-tools
-  - android-${ANDROID_API}
-  - build-tools-${ANDROID_BUILD_TOOLS}
-  - extra
+    # Update Android SDK Tools
+    - tools
 
+    - build-tools-23.0.1
+    - android-23
+
+    # Support library
+    - extra-android-support
+    - extra-android-m2repository
 script:
-- ./gradlew clean test build
+- chmod +x ./gradlew
