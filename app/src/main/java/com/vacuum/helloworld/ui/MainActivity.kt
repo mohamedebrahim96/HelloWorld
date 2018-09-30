@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        App.dagger2.inject(this)
+        App.dagger22.inject(this)
 
         test.toImage(image_test,"https://avatars2.githubusercontent.com/u/16405013?s=460&v=4")
     }
