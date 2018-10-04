@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="match_parent"
@@ -13,4 +13,35 @@
         android:id="@+id/image_test"
         />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="instance"
+        android:background="#0f00b1"
+        android:id="@+id/instance"
+        android:textSize="25dp"
+        android:padding="10dp"
+        android:textColor="#fff"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Counter = 0"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:id="@+id/counter"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Singleton = 0"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:id="@+id/singleton"
+        />
+
+
+</LinearLayout>
